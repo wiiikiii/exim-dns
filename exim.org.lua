@@ -36,10 +36,10 @@ a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
 a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
 
 -- MX records
-mx(_a,'tahini.csx.cam.ac.uk', ttl)
-mx(_a,'boom.graemef.net', ttl)
+mx(_a,'tahini.csx.cam.ac.uk', 5, ttl)
+mx(_a,'boom.graemef.net', 15, ttl)
 --
-mx('bugs','tahini.csx.cam.ac.uk', ttl)
+mx('bugs','tahini.csx.cam.ac.uk', 5, ttl)
 
 -- Mirrors etc - A and a few CNAME records
 a(concat('www.us', _a),     '209.58.132.254',  ttl)
