@@ -12,7 +12,7 @@
 
 -- IPs we use
 local main_ipv4 = '131.111.8.192'
-local main_ipv6 = '2001063002120008020423fffed6b664'
+local main_ipv6 = '2001:630:212:8:204:23ff:fed6:b664'
 
 -- Standard TTL
 local ttl = 7200
