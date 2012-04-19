@@ -3,10 +3,7 @@
 --
 
 function google_app(domain, ttl)
-  local ttl = ttl
-  if ttl == nil then
-    ttl = 7200
-  end
+  local ttl = ttl or 28800
   
   -- Configure mail exchangers
   mx(domain, 'aspmx.l.google.com',      10, ttl)
@@ -31,10 +28,7 @@ end
 
 
 function a_and_aaaa(domain, ipv4, ipv6, ttl)
-  local ttl = ttl
-  if ttl == nil then
-    ttl = 7200
-  end
+  local ttl = ttl or 28800
   
   a(domain, ipv4, ttl)
   aaaa(domain, ipv6, ttl)
