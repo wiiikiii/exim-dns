@@ -29,11 +29,7 @@ a_and_aaaa('docs',  main_ipv4, main_ipv6, ttl)
 a_and_aaaa('vcs',   main_ipv4, main_ipv6, ttl)
 a_and_aaaa('git',   main_ipv4, main_ipv6, ttl)
 a_and_aaaa('dev',   main_ipv4, main_ipv6, ttl)
-a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
-a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
-a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
-a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
-a_and_aaaa('mail',  main_ipv4, main_ipv6, ttl)
+a_and_aaaa('www2',  main_ipv4, main_ipv6, ttl)
 
 -- MX records
 mx(_a,'tahini.csx.cam.ac.uk', 5, ttl)
