@@ -15,7 +15,7 @@ local main_ipv4 = '131.111.8.192'
 local main_ipv6 = '2001:630:212:8:204:23ff:fed6:b664'
 
 -- Standard TTL
-local ttl = 7200
+local ttl = 28800
 
 -- Basic A/AAAA records
 a_and_aaaa(_a,      main_ipv4, main_ipv6, ttl)
