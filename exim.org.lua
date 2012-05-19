@@ -33,7 +33,6 @@ mx(_a,              'boom.graemef.net', 15,     ttl)
 mx('bugs',          'tahini.csx.cam.ac.uk', 5,  ttl)
 
 -- Mirrors etc - A and a few CNAME records
-a('www.us',         '209.58.132.254',           ttl)
 a('www.ie',         '193.120.14.243',           ttl)
 a('www.fr',         '193.54.153.246',           ttl)
 a('www.congo',      '194.7.39.155',             ttl)
@@ -42,7 +41,6 @@ a('www.de',         '195.211.161.101',          ttl)
 a('www.tw',         '192.72.81.219',            ttl)
 a('www.pl',         '193.219.28.2',             ttl)
 cname('www.no',     'spheniscus.uninett.no',    ttl)
-cname('www.in',     'exim.in.freeos.com',       ttl)
 
 -- Delegation of testdns.exim.org for testsuite
 ns('testdns',       'nlns.globnix.net',         ttl)
