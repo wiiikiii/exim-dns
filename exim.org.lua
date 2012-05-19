@@ -49,4 +49,8 @@ a('www.pl',     '193.219.28.2',    ttl)
 cname('www.no', 'spheniscus.uninett.no', ttl)
 cname('www.in', 'exim.in.freeos.com',    ttl)
 
+-- Delegation of testdns.exim.org for testsuite
+ns('testdns',   'nlns.globnix.net')
+ns('testdns',   'us0ns.globnix.net')
+
 -- end
