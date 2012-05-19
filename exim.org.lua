@@ -22,8 +22,8 @@ local ttl = 28800
 local a_record_names = {
     _a, 'www', 'mail', 'ftp', 'wiki', 'lists', 'bugs',
     'docs', 'vcs', 'git', 'dev', 'www2' }
-for i,v in pairs(a_record_names) do
-    a_and_aaaa(v,   main_ipv4, main_ipv6,       ttl)
+for val in values(a_record_names) do
+    a_and_aaaa(val, main_ipv4, main_ipv6,       ttl)
 end
 
 -- MX records
