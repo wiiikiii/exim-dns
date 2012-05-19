@@ -18,18 +18,13 @@ local main_ipv6 = '2001:630:212:8:204:23ff:fed6:b664'
 local ttl = 28800
 
 -- Basic A/AAAA records
-a_and_aaaa(_a,      main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('www',   main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('mail',  main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('ftp',   main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('wiki',  main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('lists', main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('bugs',  main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('docs',  main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('vcs',   main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('git',   main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('dev',   main_ipv4, main_ipv6,       ttl)
-a_and_aaaa('www2',  main_ipv4, main_ipv6,       ttl)
+
+local a_record_names = {
+    _a, 'www', 'mail', 'ftp', 'wiki', 'lists', 'bugs',
+    'docs', 'vcs', 'git', 'dev', 'www2' }
+for i,v in pairs(a_record_names) do
+    a_and_aaaa(v,   main_ipv4, main_ipv6,       ttl)
+end
 
 -- MX records
 mx(_a,              'tahini.csx.cam.ac.uk', 5,  ttl)
