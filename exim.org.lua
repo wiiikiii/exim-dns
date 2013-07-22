@@ -11,8 +11,12 @@
 --    .exim.org::c.ns.bytemark.co.uk:21600
 
 -- IPs we use
-local main_ipv4 = '131.111.8.192'
-local main_ipv6 = '2001:630:212:8:204:23ff:fed6:b664'
+local tahini_ipv4 = '131.111.8.192'
+local tahini_ipv6 = '2001:630:212:8:204:23ff:fed6:b664'
+local hummus_ipv4 = '131.111.8.88'
+local hummus_ipv6 = '2001:630:212:8::e:f0e'
+local main_ipv4 = tahini_ipv4
+local main_ipv6 = tahini_ipv6
 
 -- Standard TTL
 local ttl = 28800
@@ -25,6 +29,11 @@ local a_record_names = {
 for val in values(a_record_names) do
     a_and_aaaa(val, main_ipv4, main_ipv6,       ttl)
 end
+
+-- Server transition
+
+a_and_aaaa('newsite', hummus_ipv4, hummus_ipv6, ttl)
+
 
 -- MX records
 mx(_a,              'tahini.csx.cam.ac.uk', 5,  ttl)
