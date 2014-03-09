@@ -32,7 +32,13 @@ end
 
 -- Server transition
 
-a_and_aaaa('newsite', hummus_ipv4, hummus_ipv6, ttl)
+local newsite_record_names = {
+    'newsite',
+    'n-vcs', 'n-docs', 'n-git', 'n-dev', 'n-wiki', 'n-lists', 'n-bugs', 'n-ftp',
+    'n-www' }
+for val in values(newsite_record_names) do
+    a_and_aaaa(val, hummus_ipv4, hummus_ipv6, ttl)
+end
 
 
 -- MX records
